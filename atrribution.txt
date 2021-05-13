@@ -1,0 +1,6 @@
+https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php , terms of use at https://www.tutorialrepublic.com/terms-of-use.php :
+    config.php (adapted)
+    login.php 
+    register.php (adapted)
+    bonsaisql.txt (structure, first table)
+    logout.php

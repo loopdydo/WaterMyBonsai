@@ -1,0 +1,22 @@
+CREATE DATABASE bonsai;
+USE bonsai;
+
+CREATE TABLE users (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    city varchar(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE trees (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    name VARCHAR(255)  NOT NULL,
+    water_freq INT NOT NULL,
+    since_watered INT DEFAULT 1   
+);
+
+-- change password for production
+CREATE USER 'webuser'@'%' IDENTIFIED BY 'web';
+GRANT ALL PRIVILEGES ON bonsai.* TO 'webuser'@'%';
